@@ -17,7 +17,7 @@ public class SeleniumStandAloneTest {
 	public void basic() {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
-		driver.get("http://localhost:8080/pages/index.html");
+		driver.get("http://34.70.117.31:8080/pages/index.html");
 		System.out.println(driver.getCurrentUrl());
 		System.out.println(driver.getTitle());
 		driver.quit();
@@ -34,13 +34,13 @@ public class SeleniumStandAloneTest {
 		//WebDriverManager.chromedriver().setup();
 		//WebDriver driver = new ChromeDriver();
 		WebDriver remoteDriver = new RemoteWebDriver(
-				new URL("http://localhost:4444/wd/hub"), capabilites);
+				new URL("http://34.70.117.31:4444/wd/hub"), capabilites);
 		
 		//RemoteWebDriver
 		//	Location of Standaloneserver
 		//  Which Browser? Which OS? => Capabilities
 		
-		remoteDriver.get("http://localhost:8080/pages/index.html");
+		remoteDriver.get("http://34.70.117.31:8080/pages/index.html");
 		System.out.println(remoteDriver.getCurrentUrl());
 		System.out.println(remoteDriver.getTitle());
 		Thread.sleep(15000);
