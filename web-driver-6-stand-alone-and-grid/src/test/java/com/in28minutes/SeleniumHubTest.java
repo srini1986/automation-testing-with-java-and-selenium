@@ -35,13 +35,13 @@ public class SeleniumHubTest {
 		//WebDriverManager.chromedriver().setup();
 		//WebDriver driver = new ChromeDriver();
 		WebDriver remoteDriver = new RemoteWebDriver(
-				new URL("http://34.70.117.31:4444/wd/hub"), capabilites);
+				new URL("http://34.69.21.56:4444/wd/hub"), capabilites);
 		
 		//RemoteWebDriver
 		//	Location of Standaloneserver
 		//  Which Browser? Which OS? => Capabilities
 		
-		remoteDriver.get("http://34.70.117.31:8080/pages/index.html");
+		remoteDriver.get("http://34.69.21.56:8080/pages/index.html");
 		System.out.println(remoteDriver.getCurrentUrl());
 		System.out.println(remoteDriver.getTitle());
 		Thread.sleep(10000);
@@ -59,13 +59,13 @@ public class SeleniumHubTest {
 		//WebDriverManager.chromedriver().setup();
 		//WebDriver driver = new ChromeDriver();
 		WebDriver remoteDriver = new RemoteWebDriver(
-				new URL("http://34.70.117.31:4444/wd/hub"), capabilites);
+				new URL("http://34.69.21.56:4444/wd/hub"), capabilites);
 		
 		//RemoteWebDriver
 		//	Location of Standaloneserver
 		//  Which Browser? Which OS? => Capabilities
 		
-		remoteDriver.get("http://34.70.117.31:8080/pages/index.html");
+		remoteDriver.get("http://34.69.21.56:8080/pages/index.html");
 		System.out.println(remoteDriver.getCurrentUrl());
 		System.out.println(remoteDriver.getTitle());
 		Thread.sleep(10000);
