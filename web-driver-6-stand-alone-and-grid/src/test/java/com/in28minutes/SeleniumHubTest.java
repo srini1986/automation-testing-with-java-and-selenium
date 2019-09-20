@@ -15,13 +15,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class SeleniumHubTest {
 	//selenium-standalone start -- -role hub
 
-	//Nodes should register to http://192.168.8.69:4444/grid/register/
 	
-	//Clients should connect to http://192.168.8.69:4444/wd/hub
-	
-	//selenium-standalone start -- -role node -hub http://192.168.8.69:4444/grid/register/ 
-	
-	//selenium-standalone start -- -role node -port 5556 -hub http://192.168.8.69:4444/grid/register/ 
 
 	@Test(threadPoolSize=2, invocationCount=4)
 	public void hub_chrome() throws MalformedURLException, InterruptedException {
@@ -30,16 +24,11 @@ public class SeleniumHubTest {
 		
 		//chrome, firefox, htmlunit, internet explorer, iphone, opera
 		capabilites.setBrowserName("chrome");
-		//capabilites.setPlatform(Platform.EL_CAPITAN);
-		
-		//WebDriverManager.chromedriver().setup();
-		//WebDriver driver = new ChromeDriver();
+
 		WebDriver remoteDriver = new RemoteWebDriver(
 				new URL("http://34.69.21.56:4444/wd/hub"), capabilites);
 		
-		//RemoteWebDriver
-		//	Location of Standaloneserver
-		//  Which Browser? Which OS? => Capabilities
+
 		
 		remoteDriver.get("http://34.69.21.56:8080/pages/index.html");
 		System.out.println(remoteDriver.getCurrentUrl());
@@ -53,17 +42,13 @@ public class SeleniumHubTest {
 		
 		DesiredCapabilities capabilites = new DesiredCapabilities();
 		
-		//chrome, firefox, htmlunit, internet explorer, iphone, opera
+		
 		capabilites.setBrowserName("firefox");
 		
-		//WebDriverManager.chromedriver().setup();
-		//WebDriver driver = new ChromeDriver();
+		
 		WebDriver remoteDriver = new RemoteWebDriver(
 				new URL("http://34.69.21.56:4444/wd/hub"), capabilites);
 		
-		//RemoteWebDriver
-		//	Location of Standaloneserver
-		//  Which Browser? Which OS? => Capabilities
 		
 		remoteDriver.get("http://34.69.21.56:8080/pages/index.html");
 		System.out.println(remoteDriver.getCurrentUrl());
